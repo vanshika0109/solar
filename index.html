@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet"/>
+    <title>Solar power</title>
+  </head>
+  <body>
+    <center>
+      <h1>Solar Power Plant Estimater</h1>
+    </center>
+
+
+        <!-- slider section -->
+    <div class="d-flex flex-column justify-content-center w-100 h-100 slider-section">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="pic-ctn">
+          <img src="s2.jpg" alt="" class="pic" >
+          <img src="s1.jpg" alt="" class="pic" >
+          <img src="s3.jpg" alt="" class="pic" >
+          <img src="s4.jpg" alt="" class="pic" >
+          <img src="s5.jpg" alt="" class="pic" >
+        </div>
+      </div>
+    </div>
+    <br>
+    <hr style="margin-top: 30%;">
+    <br><br>
+
+<!-- form section -->
+    <div class="form-link">
+      <form>
+        <p style="font-size: 20px;">Please enter the values to find the estimate: <br>
+          <ul>
+            Following things are to be bought (one each) by default: 
+            <li>-> LA</li>
+            <li>-> Earthing</li>
+            <li>-> DCDB</li>
+            <li>-> Solar & net meter</li>
+          </ul>
+        </p>
+
+        <label for="solarPVmodules" class="heading">Solar PV Modules:</label><br>
+        <input type="radio" name="solarPVmodules" value="Poly" id="Poly"><label for="solarPVmodules">Poly</label><br>
+        <input type="radio" name="solarPVmodules" value="Mono" id="Mono"><label for="solarPVmodules">Mono</label><br>
+        <br>
+        <label for="gridTie" class="heading">Grid Tie Inverter:</label><br>
+        <input type="radio" name="gridTie" value="8 years" id="gridTie1"><label for="gridTie">8 years</label><br>
+        <input type="radio" name="gridTie" value="10 years" id="gridTie2"><label for="gridTie">10 years</label><br>
+        <br>
+        <label for="cable" class="heading">Cable:</label><br>
+        <input type="radio" name="cable" value="Polycab" id="cable1"><label for="cable">Polycab</label><br>
+        <input type="radio" name="cable" value="kei" id="cable2"><label for="cable">KEI(30 mtr)</label><br>
+        <br>
+        <label for="struct" class="heading">Structure:</label><br>
+        <input type="radio" name="struct" value="2*3" id="struct1"><label for="struct">2*3</label><br>
+        <input type="radio" name="struct" value="4*6" id="struct2"><label for="struct">4*6</label><br>
+        <input type="radio" name="struct" value="6*8" id="struct3"><label for="struct">6*8</label><br>
+        <input type="radio" name="struct" value="7*9" id="struct4"><label for="struct">7*9</label><br>
+        <br>
+        <label for="amc" class="heading">AMC:</label><br>
+        <input type="radio" name="amc" value="1 year" id="amc1"><label for="amc">1 year</label><br>
+        <input type="radio" name="amc" value="2 years" id="amc2"><label for="amc">2 years</label><br>
+        <input type="radio" name="amc" value="5 years" id="amc3"><label for="amc">5 years</label><br>
+        <br>
+        <label for="mod" class="heading">Modules:</label><br>
+        <input type="radio" name="mod" value="Adani" id="mod1"><label for="mod">Adani</label><br>
+        <input type="radio" name="mod" value="Waree" id="mod2"><label for="mod">Waree</label><br>
+        <input type="radio" name="mod" value="INA" id="mod3"><label for="mod">INA</label><br>
+        <input type="radio" name="mod" value="APS" id="mod4"><label for="mod">APS</label><br>
+        <br>
+        <label for="gti" class="heading">GTI:</label><br>
+        <input type="radio" name="gti" value="Ksolare" id="gti1"><label for="gti">Ksolare</label><br>
+        <input type="radio" name="gti" value="Growatt" id="gti2"><label for="gti">Growatt</label><br>
+        <input type="radio" name="gti" value="Sungrow" id="gti3"><label for="gti">Sungrow</label><br>
+        <br>
+        <label for="bill" class="heading">Enter your monthly bill: <br>
+          <span>(if you need help to find the amount in your bill 
+          <a href="cbec-understanding-electricity-bill.pdf" download>CLICK HERE!</a>)<br></span></label><br>
+        <input type="text" name="bill" id="bill">
+        <br><br>
+        <button type="submit" id="btn" onclick="submitform()">Let's Estimate!</button>
+      </form>
+      <p id="output">
+      
+      </p>
+    </div>
+    <script type="text/javascript" src="cost.js"></script>
+  </body>
+</html>
+s
